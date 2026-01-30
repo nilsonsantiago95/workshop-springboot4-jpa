@@ -2,7 +2,6 @@ package com.nilsonSantiago.course.resources;
 
 import com.nilsonSantiago.course.entities.Category;
 import com.nilsonSantiago.course.services.CategoryService;
-import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
