@@ -5,14 +5,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.io.Serial;
 import java.time.Instant;
 
 @ControllerAdvice
 public class ResourceExceptionHandler extends RuntimeException {
 
-    private static final Long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
 
+    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<StandardError> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request) {
 
         String error = "Resource not found";

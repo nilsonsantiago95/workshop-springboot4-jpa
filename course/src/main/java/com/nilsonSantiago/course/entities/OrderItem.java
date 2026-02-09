@@ -6,6 +6,7 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,7 +14,8 @@ import java.util.Objects;
 @Table(name = "tb_order_item")
 public class OrderItem implements Serializable {
 
-    private static final Long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
