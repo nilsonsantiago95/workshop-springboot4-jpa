@@ -3,6 +3,7 @@ package com.nilsonSantiago.course.resources;
 import com.nilsonSantiago.course.entities.User;
 import com.nilsonSantiago.course.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
